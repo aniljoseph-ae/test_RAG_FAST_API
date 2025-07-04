@@ -17,8 +17,8 @@ A production-grade FastAPI application for advanced NLP tasks with Retrieval-Aug
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/nlp-rag-app.git
-   cd nlp-rag-app
+   git clone https://github.com/aniljoseph-ae/test_RAG_FAST_API.git
+   cd test_RAG_FAST_API
 
 
 Install dependencies:pip install -r requirements.txt
