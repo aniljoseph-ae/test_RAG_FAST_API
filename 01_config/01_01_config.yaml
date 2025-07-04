@@ -1,0 +1,37 @@
+
+# Application configuration for NLP RAG App
+app:
+  name: nlp_rag_app
+  host: 0.0.0.0
+  port: 8000
+  log_level: info
+
+# Vector database configuration (using Weaviate as an example)
+vector_db:
+  url: http://localhost:8080
+  class_name: NLP_Documents
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+# NLP model configuration
+nlp:
+  classification_model: distilbert-base-uncased-finetuned-sst-2-english
+  entity_model: dslim/bert-base-NER
+  summarization_model: facebook/bart-large-cnn
+  batch_size: 16
+
+# Cache configuration (using Redis)
+cache:
+  host: localhost
+  port: 6379
+  db: 0
+  ttl: 3600  # Cache TTL in seconds
+
+# Task queue configuration (using Celery with Redis backend)
+queue:
+  broker_url: redis://localhost:6379/0
+  backend_url: redis://localhost:6379/1
+
+# Webhook settings
+webhook:
+  enabled: true
+  timeout: 30  # Webhook timeout in seconds
